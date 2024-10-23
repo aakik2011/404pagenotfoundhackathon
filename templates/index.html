@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Education Plan Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h1 class="text-center mb-4">Personalized Education Plan Generator</h1>
+                        <form action="/generate_plan" method="POST">
+                            <!-- Student Information Section -->
+                            <div class="form-group">
+                                <label for="name">Student's Name:</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder=
+                                "Enter student's name" required>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="grade">Overall Grade (0-100):</label>
+                                <input type="number" id="grade" name="grade" min="0" max="100" class=
+                                "form-control" placeholder="Enter overall grade" required>
+                            </div>
+
+
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="attention_span">Attention Span (1-10):</label>
+                                    <input type="number" id="attention_span" name="attention_span" min="1" max=
+                                    "10" class="form-control" required>
+                                </div>
+
+
+                                <div class="form-group col-md-4">
+                                    <label for="behavior">Behavior (1-10):</label>
+                                    <input type="number" id="behavior" name="behavior" min="1" max="10" class=
+                                    "form-control" required>
+                                </div>
+
+
+                                <div class="form-group col-md-4">
+                                    <label for="willingness">Willingness to Learn (1-10):</label>
+                                    <input type="number" id="willingness" name="willingness" min="1" max="10" class=
+                                    "form-control" required>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="iq">IQ Score:</label>
+                                <input type="number" id="iq" name="iq" class="form-control" placeholder="Enter IQ score" required>
+                            </div>
+
+
+                            <!-- Subject Grades Section -->
+                            <h3 class="mt-4">Subject Grades</h3>
+                            <div class="form-group">
+                                <label for="math_grade">Math:</label>
+                                <input type="number" id="math_grade" name="math_grade" min="0" max="100" class="form-control" placeholder=
+                                "Enter Math grade" required>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="science_grade">Science:</label>
+                                <input type="number" id="science_grade" name="science_grade" min="0" max="100" class="form-control" placeholder=
+                                "Enter Science grade" required>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="english_grade">English:</label>
+                                <input type="number" id="english_grade" name="english_grade" min="0" max="100" class="form-control" placeholder=
+                                "Enter English grade" required>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="history_grade">History:</label>
+                                <input type="number" id="history_grade" name="history_grade" min="0" max="100" class="form-control" placeholder=
+                                "Enter History grade" required>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="Computer_Science_grade">Computer_Science:</label>
+                                <input type="number" id="Computer_Science_grade" name="Computer_Science_grade" min="0" max="100" class="form-control" placeholder=
+                                "Enter Computer Science grade" required>
+                            </div>
+
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary btn-block mt-4">Generate Plan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

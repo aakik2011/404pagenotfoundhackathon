@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Generated Education Plan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <!-- Education Plan Header -->
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h1 class="text-center mb-4">Your Generated Education Plan</h1>
+
+
+                        <!-- Subject Performance Section -->
+                        <h2 class="text-center">Subject Performance</h2>
+                        <div class="text-center mb-4">
+                            <img src="{{ url_for('static', filename='subject_performance.png') }}" alt=
+                            "Subject Performance Chart" class="img-fluid" style="max-width: 80%; height: auto;">
+                        </div>
+
+
+                        <!-- Plan Details Section -->
+                        <h2 class="text-center">Plan Details</h2>
+                        <div class="bg-white p-4 rounded mb-4">
+                            {{ plan | safe }}  <!-- Render HTML safely -->
+                        </div>
+
+
+                        <!-- Back to Home Link -->
+                        <div class="text-center">
+                            <a href="/" class="btn btn-primary">Back to Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -5,9 +5,11 @@ matplotlib.use('Agg')  # Use a non-GUI backend
 import numpy as np
 from sklearn.cluster import KMeans
 from flask import Flask, render_template, request
+from flask_cors import CORS
 
 
 app = Flask(__name__)
+CORS(app)
 
 # Function to create and display a radar chart of subject grades
 def create_subject_radar_chart(subject_grades):
